@@ -12,8 +12,8 @@ const transport = nodemailer.createTransport({
 });
 
 transport.sendMail({
-    from: 'Felipe1501 <felipebsantoslo1501@gmail.com>',
-    to: 'aubifelipe@gmail.com',
+    from: 'Felipe1501 <process.env.EMAIL>',
+    to: process.env.EMAIL_DESTINATARIO,
     subject: 'Enviando email com nodemailer!!!',
     html: '<h1>Hello Hello!</h1><p> Email Enviado com Nodemailer fiiii!!!!</p>',
     text: 'Hello Hello! Email Enviado com Nodemailer fiiii!!',
